@@ -84,13 +84,78 @@ Nothing special happens. Browsers only attach cookies that belong to the domain 
 
 ---
 
-# Part 3 — The loophole in `Lax` (why we need more)
+# Part 3 — CSRF: What SameSite Protects Against
+
+**CSRF (Cross-Site Request Forgery)** is an attack where a malicious website tricks your browser into making an unwanted request to a site where you're authenticated.
+
+## How CSRF Works
+
+**The Attack Scenario:**
+
+1. You're logged into `bank.com` (your session cookie is stored)
+2. You visit `evil.com` (while still logged into `bank.com`)
+3. `evil.com` contains a hidden form or image that submits to `bank.com/transfer`:
+
+```html
+<!-- On evil.com -->
+<form action="https://bank.com/transfer" method="POST" id="evil-form">
+  <input name="amount" value="10000">
+  <input name="to" value="attacker-account">
+</form>
+<script>
+  document.getElementById('evil-form').submit();  // Auto-submit
+</script>
+```
+
+4. Your browser automatically includes your `bank.com` session cookie with this request
+5. The bank server sees a valid session cookie and processes the transfer — **even though you never intended to make this request!**
+
+## Why Cookies Are Vulnerable to CSRF
+
+- **Cookies are sent automatically** by the browser with every request to the cookie's domain
+- **No JavaScript needed** — a simple `<form>`, `<img>`, or `<link>` tag can trigger the request
+- **The server can't tell** if the request was intentional or forged — it just sees a valid session cookie
+
+## How SameSite Protects Against CSRF
+
+**With `SameSite='lax'` or `'strict'`:**
+
+```html
+<!-- On evil.com, trying to POST to bank.com -->
+<form action="https://bank.com/transfer" method="POST">
+  <input name="amount" value="10000">
+</form>
+```
+
+- The browser sees this is a **cross-site POST request**
+- With `SameSite='lax'` or `'strict'`, the browser **does NOT send** the `bank.com` cookie
+- The server receives the request **without a session cookie**
+- The server rejects the request (user appears unauthenticated) ✅
+
+**Without `SameSite` (or with `SameSite='none'`):**
+
+- The browser **sends** the `bank.com` cookie automatically
+- The server sees a valid session and processes the transfer 💥
+
+## SameSite Settings and CSRF Protection
+
+| Setting | CSRF Protection | Use Case |
+|---------|----------------|----------|
+| `SameSite='strict'` | **Maximum** — blocks ALL cross-site requests | Highest security, but breaks external links |
+| `SameSite='lax'` | **Strong** — blocks cross-site POST/PUT/DELETE | Good balance (default in modern browsers) |
+| `SameSite='none'` | **None** — cookies sent in all contexts | Requires CSRF tokens or other protection |
+
+> **Note:** `SameSite='lax'` still allows cross-site GET requests (like clicking a link), which is why you need CORS for additional data protection.
+
+---
+
+# Part 4 — The loophole in `Lax` (why we need more)
 
 **Problem:** `SameSite: Lax` allows certain cross-site GET requests to include cookies. That means an attacker can sometimes trigger reads (GETs) that carry your session cookie. To prevent data theft, we need another layer of protection.
 
 ---
 
-# Part 4 — CORS: the second layer for GET requests
+# Part 5 — CORS: the second layer for GET requests
 
 As noted above, under `SameSite=Lax` a cross-site GET can include cookies. An attacker **can** trigger a GET to your site and the request will reach the server and be processed. But modern browsers implement **CORS** to prevent unauthorized websites from **reading** those responses.
 
@@ -157,7 +222,7 @@ app.use(cors({
 
 ---
 
-# Part 5 — `SameSite` vs CORS — the complete picture
+# Part 6 — `SameSite` vs CORS — the complete picture
 
 They protect different attack surfaces:
 
@@ -223,6 +288,27 @@ This combination defends against:
 - CSRF actions (`sameSite`)
 - Cross-site data exfiltration (CORS)
     
+
+## Part 7: Why Different Settings for Dev vs Production?
+
+### 🛡️ 1. `secure`
+
+| Environment     | Value           | Explanation                                                                                                                                                                                                                               |
+| --------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Development** | `secure: false` | Local development runs on **HTTP (`localhost`)**, not HTTPS. If set to `true`, the browser refuses to store the cookie and shows an error: _“Cookie marked 'secure' but you're using HTTP.”_  <br>→ No cookies → no session → app breaks. |
+| **Production**  | `secure: true`  | Required when serving over **HTTPS**. Ensures cookies are sent only through encrypted connections, protecting users from **session hijacking** (e.g., an attacker on public Wi-Fi capturing cookies sent via HTTP).                       |
+### 🌐 2. `sameSite`
+
+| Environment     | Value              | Explanation                                                                                                                                                                                                       |
+| --------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Development** | `sameSite: 'lax'`  | Frontend and backend use **different ports** (e.g., `localhost:3000` → `localhost:8080`), so `'lax'` allows cross-port requests that still work locally. Ideal for dev setups where everything is on `localhost`. |
+| **Production**  | `sameSite: 'none'` | Frontend and backend use **different domains** (e.g., `https://myapp.com` → `https://api.myapp.com`). `'none'` enables cross-domain cookies for authenticated API calls. Must be used with `secure: true`.        |
+### 🏷️ 3. `domain`
+
+| Environment     | Value                       | Explanation                                                                                                                                                                                                               |
+| --------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Development** | `domain: undefined`         | Defaults to the **current host** (e.g., `localhost:8080`). Works fine for a single local origin, but cookies are not shared between ports or subdomains.                                                                  |
+| **Production**  | `domain: '.yourdomain.com'` | Leading dot (`.yourdomain.com`) allows the cookie to be shared across **all subdomains**, such as:  <br>✓ `myapp.com`  <br>✓ `api.myapp.com`  <br>✓ `admin.myapp.com`. Enables consistent login sessions across services. |
 
 ---
 
