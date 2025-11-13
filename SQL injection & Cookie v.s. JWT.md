@@ -3,6 +3,7 @@
 Now let's switch gears to a completely different vulnerability: SQL Injection.
 
 https://xkcd.com/327/
+
 ![Exploits of a Mom](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)
 
 ### The Vulnerability: String Concatenation
