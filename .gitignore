@@ -1,12 +1,2 @@
 .pptx
-
-# MkDocs
-site/
-.mkdocs_cache/
-*.pyc
-__pycache__/
-
-# Virtual Environment
 venv/
-env/
-ENV/

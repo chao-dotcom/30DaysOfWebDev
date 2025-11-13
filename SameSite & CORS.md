@@ -96,7 +96,7 @@ As noted above, under `SameSite=Lax` a cross-site GET can include cookies. An at
 
 Example attack (under SameSite: lax):
 
-![CORS mechanism diagram showing how browser blocks cross-origin requests](images/cors-mechanism-diagram.png)
+![CORS mechanism diagram showing how browser blocks cross-origin requests](asset/cors-mechanism-diagram.png)
 
 ```text
 Evil.com ---(Cookie A) /GET balance---> Bank.com
