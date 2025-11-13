@@ -2,8 +2,8 @@
 
 Now let's switch gears to a completely different vulnerability: SQL Injection.
 
-![[Pasted image 20251113133046.png]]
 https://xkcd.com/327/
+![Exploits of a Mom](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)
 Image URL (for hotlinking/embedding): [https://imgs.xkcd.com/comics/exploits_of_a_mom.png](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)
 
 ### The Vulnerability: String Concatenation
