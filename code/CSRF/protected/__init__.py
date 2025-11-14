@@ -1,0 +1,4 @@
+"""
+Protected endpoints package
+"""
+
