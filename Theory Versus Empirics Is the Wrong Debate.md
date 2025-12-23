@@ -1,5 +1,7 @@
 # The Dispute: What Are We Actually Disagreeing About?
 
+![](asset/Pasted%20image%2020251223141042.png)
+
 I recently had a heated but meaningful discussion with a close friend. This document is an attempt to clarify where our disagreement actually lies—and where it does not.
 ### Andy’s Position
 
@@ -33,7 +35,7 @@ To avoid confusion, it is important to distinguish between the following concept
 These two are related but not equivalent.
 
 ### Empirical Research
-
+![](asset/Pasted%20image%2020251223141404.png)
 Within academia, empirical research refers to a **methodological distinction**, not a connection to industry.
 
 > **Empirical research in academia** means using data, experiments, econometrics, or observation *within the academic system* to test or revise theoretical claims.
@@ -93,7 +95,7 @@ Researchers may manipulate results at various stages:
 In short, empirical research can be manipulated at every layer:
 > **data → variables → models → statistics → narratives → incentives**
 ### Case Studies 
-
+![](asset/Pasted%20image%2020251223141318.png)
 My claim is not that empirical research is useless, but that documented failures and distortions exist across disciplines, often driven by incentive misalignment.
 
 Examples include:
@@ -138,6 +140,7 @@ Pete Judo examines systemic weaknesses in academic research from a science-commu
 >Rather, empirical / 實證派 research can _appear_ especially productive and useful under current incentive structures, while in some cases producing **misleading or counterproductive outcomes** when validation, replication, and methodological rigor are subordinated to performance metrics.
 
 # The utility of Theoretical academia
+![](asset/Pasted%20image%2020251223141208.png)
 ### Ideas Once Considered “Useless”
  Theoretical academia is often dismissed as “useless” when judged by immediate, short-term utility. This judgment, however, is **fundamentally shortsighted**. Many theoretical contributions that initially appeared detached from practical application later became the **foundations of entire industries and technological systems**.
 
@@ -165,6 +168,7 @@ A few representative examples illustrate this pattern:
 These contributions were **not immediately recognized** as useful. Their value emerged only after complementary technologies, data, or infrastructure matured.
 
 ### Why Theory Matters Structurally
+![](asset/Pasted%20image%2020251223141231.png)
 
 >Industry does not systematically invest in non-commercialized foundational theory.
 
@@ -201,7 +205,7 @@ Researchers can download existing datasets, apply standardized analytical pipeli
 | Collaboration        | Relatively easy    | Often difficult      |
 | Publishability       | Higher             | Riskier              |
 # Conclusion: When KPI becomes the Goal
-
+![](asset/Pasted%20image%2020251223141258.png)
 Andy and I agree on the diagnosis: institutional incentives matter, and poorly designed KPIs distort behavior.
 
 Where this article draws a sharper boundary is in rejecting the assumption that empirical output is inherently safer, more useful, or more truthful than theoretical work. Empirical research without rigor is not scientific practice—it is production. Theory without immediate application is not useless—it is delayed.
